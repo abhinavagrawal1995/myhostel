@@ -1,7 +1,8 @@
 <?php 
+include 'keys.php'; 
 $fb = new Facebook\Facebook([
-  'app_id' => '{app-id}', // Replace {app-id} with your app id
-  'app_secret' => '{app-secret}',
+  'app_id' => $app_id, // Replace {app-id} with your app id
+  'app_secret' =>  $app_secret,
   'default_graph_version' => 'v2.2',
   ]);
 
@@ -65,7 +66,7 @@ if (! $accessToken->isLongLived()) {
 }
 
 $_SESSION['fb_access_token'] = (string) $accessToken;
-
+echo 'yay';
 // User is logged in with a long-lived access token.
 // You can redirect them to a members-only page.
 //header('Location: https://example.com/members.php');
