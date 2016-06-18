@@ -1,5 +1,6 @@
 <?php 
 include 'keys.php'; 
+require_once __DIR__ . 'Facebook/autoload.php';
 $fb = new Facebook\Facebook([
   'app_id' => $app_id, // Replace {app-id} with your app id
   'app_secret' => $app_secret,
